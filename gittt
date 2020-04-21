@@ -1,7 +1,1264 @@
-#include <stdio.h>
-main()
-{
-int x,y,z;
-scanf("%d%d%d",&x,&Y,&z);
-printf(x);
-}
+doctype html
+html
+  head
+    title c
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    // jQuery library
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    // Latest compiled JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')  
+    script(src='javascripts/delete.js')
+    script(src='javascripts/edit.js')
+    script(src="//code.jquery.com/jquery-3.1.0.js")  
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')                                    
+    
+      
+  
+    script.
+      $(document).ready(function(){
+      $('#carousel').carousel({
+        interval:0.2
+      });
+      });
+   
+    
+    style.
+      .dontdisplay{
+         display:none;
+      }
+      html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      /* define a fixed width for the entire menu */
+      .navigation {
+      width: 250px;
+      margin-left:-20px;
+      }
+      /* reset our lists to remove bullet points and padding */
+      .mainmenu, .submenu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      }
+      /* make ALL links (main and submenu) have padding and background color */
+      .mainmenu a {
+      display: block;
+      background-color:#C5C5C5;
+      
+      text-decoration: none;
+      padding: 20px;
+      color: #000;
+      font-size: 20px;
+      }
+      /* add hover behaviour */
+      .mainmenu a:hover {
+      border-right: 5px solid black;
+      background-color: #2c3e50;
+      }
+      /* when hovering over a .mainmenu item,
+      display the submenu inside it.
+      we're changing the submenu's max-height from 0 to 200px;
+      */
+      .mainmenu li:hover .submenu {
+      display: block;
+      max-height: 255px;
+      }
+      /*
+      we now overwrite the background-color for .submenu links only.
+      CSS reads down the page, so code at the bottom will overwrite the code at the top.
+      */
+      .submenu a {
+      background-color: #999;
+      }
+      td{
+      color: #3c3b3f;
+      }
+      /* hover behaviour for links inside .submenu */
+      .submenu a:hover {
+      background-color: #666;
+      }
+      /* this is the initial state of all submenus.
+      we set it to max-height: 0, and hide the overflowed content.
+      */
+      .submenu {
+      overflow: hidden;
+      max-height: 0;
+      -webkit-transition: all 0.5s ease-out;
+      }
+    
+      
+      .aa{
+       height:200px;
+       width:250px;
+      }
+
+
+
+
+      .flip-box {
+      background-color: transparent;
+      width: 250px;
+      height: 200px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+      /* This container is needed to position the front and back side */
+      .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      }
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+      }
+      /* Position the front and back side */
+      .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+      }
+      /* Style the front side (fallback if image is missing) */
+      .flip-box-front {
+      background-color: #bbb;
+      color: black;
+      }
+      /* Style the back side */
+      .flip-box-back {
+      background-color: red;
+      color: white;
+      transform: rotateY(180deg);
+      }
+
+    
+      table{
+      border:2px  solid darkblue;
+      background:border-box aqua;
+      
+
+
+
+      }
+      th{
+      border:1px solid darkblue;
+      border-radius:1px;
+
+      }
+      td{
+      border:1px solid darkblue;
+      border-radius:1px;
+
+      }
+      h1{
+      margin-top:20px;
+      color:aqua;
+      text-shadow:2px 2px 3px orange;
+      font-weight:bold;
+      margin-left:350px;
+      font-family:Tw Cen MT;
+
+      }
+      
+      .ab{
+      border:2px solid white;
+      border-radius:30px;
+      }
+
+
+
+
+
+      
+  body(style='background: linear-gradient(to right, #bdc3c7, #2c3e50')
+    .container-fluid                                      
+      .row(style='background-color:black;height: 65px')
+        h4(style='margin-right:550px;color:white; margin-top:20px')  #{user.email}
+        h2(style='margin-left: 550px;color:white; margin-top:-30px') Design & Trainees
+        button.btn.btn-info.ab(type="submit" style="margin-left:1220px; margin-top:-80px " ) 
+          a(href='/logout') logout   
+            i.fa.fa-log-out
+      .row
+        .col-md-3(style="background-color: #C5C5C5;width:245px;height:680px")
+          nav.navigation 
+            ul.mainmenu.nav.navbar
+              li
+                a(href='#home',data-toggle='tab') Home
+              //li
+                a(href='#register',data-toggle='tab') Register
+                ul.submenu
+                  li
+                    a(href='#collage', data-toggle='tab') College Registration
+                  li
+                    a(href='#registration', data-toggle='tab') Registration
+                  li
+                    a(href='#employregister, data-toggle') employee register     
+              li
+                a(href='#') Training
+                ul.submenu
+                  li
+                    a(href='#employees', data-toggle='tab') Employee
+                  li
+                    a(href='#emplist', data-toggle='tab') Employee Details
+                  li  
+                    a(href='#collage', data-toggle='tab') College Registration
+                  li
+                    a(href='#list', data-toggle='tab') College List  
+              li
+                a(href='#') Building Plan & Design
+                ul.submenu
+                  li
+                    a(href='#employee', data-toggle='tab') Employee
+                  li
+                    a(href='#liste', data-toggle='tab') List 
+                  li
+                    a(href='#customer', data-toggle='tab') Customer
+                  li
+                    a(href='#listc', data-toggle='tab') List    
+              li
+                a(href='#') Construction Services
+                ul.submenu
+                  li
+                    a(href='#builder', data-toggle='tab') Builder
+                  li
+                    a(href='#contractors', data-toggle='tab') Contractor
+                  li
+                    a(href='#registration', data-toggle='tab') Registration
+              li
+                a(href='#') Interior
+                ul.submenu
+                  li
+                    a(href='#hall', data-toggle='tab') Hall
+                  li
+                    a(href='#room', data-toggle='tab') Room
+                  li
+                    a(href='#kitchen', data-toggle='tab') kitchen  
+              li
+                a(href='#Exterior', data-toggle='tab') Exterior
+                ul.submenu
+                  li
+                    a(href='#a', data-toggle='tab') a
+                  li
+                    a(href='#b', data-toggle='tab') b
+                  li
+                    a(href='#c', data-toggle='tab') c  
+
+              li
+                a(href='#contact', data-toggle='tab') Contact us
+
+        .col-md-9
+         .container-fluid(style='margin-left:30px;margin-top:10px;')
+          .tab-content
+            #home.tab-pane.fade.in.active
+               
+                 
+                  #carousel.carousel.slide(data-ride='carousel')
+                    ul.carousel-indicators
+                      li.active(data-target='#carousel', date-slide-to='0')
+                      li(data-target='#carousel', date-slide-to='1')
+                      li(data-target='#carousel', date-slide-to='2')
+                      li(data-target='#carousel', date-slide-to='3')
+                      li(data-target='#carousel', date-slide-to='4')  
+                    .carousel-inner
+
+                      .item.active
+                        img(src='images/95.jpg',style='height:430px;  width:150%')
+                      .item
+                        img(src='images/96.jpg',style='height:430px;  width:150%')
+                      .item
+                        img(src='images/97.jpg',style='height:430px;width:150%')
+                      .item
+                        img(src='images/98.jpeg',style='height:430px;  width:150%')
+                      .item
+                        img(src='images/99.jpg', style='height:430px; width:150%')
+                                       
+            #employees.tab-pane.fade
+
+              h1 Employee Registration
+              br
+              .container
+                .row
+                  .col-md-6(style='  padding: 20px; border-radius: 3% ;margin-left:210px')
+                    form(method="post",action="/sr")
+                      label NAME
+                      input#name.form-control(type='text', name='name', placeholder='')
+                      br
+                      label PHONE NO
+                      input#phoneno.form-control(type='number', name='phoneno', placeholder='')
+                      br
+                      label EMAIL ID
+                      input#email.form-control(type='email', name='email', placeholder='')
+                      br
+                      label City
+                      input#college.form-control(type='text', name='city', placeholder='')
+                      br
+                      button.btn.btn-primary(type='Submit', style='margin-left:225px') Submit
+           
+            #emplist.tab-pane.fade
+
+              h1 Employee Details
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example
+                      thead
+                        tr
+                          th Name
+                          th Phone 
+                          th Email
+                          th City
+                      tbody
+                        each member in data_emp
+                          tr
+                            td #{member.name} 
+                            td #{member.phoneno}
+                            td #{member.email}
+                            td #{member.city}          
+           
+                  
+                  
+           
+            #collage.tab-pane.fade
+
+              h1 College Registration
+              br
+              .container
+                .row
+                  .col-md-6(style='border: 2px solid black;  padding: 20px; border-radius: 3%;margin-left:200px')
+                    form(method="post",action="/sur")
+                      label NAME
+                      input#name.form-control(type='text', name='name', placeholder='')
+                      br
+                      label PHONE NO
+                      input#phoneno.form-control(type='NUMBER', name='phoneno', placeholder='')
+                      br
+                      label EMAIL ID
+                      input#email.form-control(type='email', name='email', placeholder='')
+                      br
+                      label COLLEGE
+                      input#college.form-control(type='text', name='college', placeholder='')
+                      br
+                      label STATE
+                      input#state.form-control(type='text', name='state', placeholder='')
+                      br
+                      label Course:
+                      select#op(name="opt")
+                        option(value="autocard") AUTOCAD
+                        option(value="3dsmax") 3DS MAX
+                        option(value="totalstation") TOTAL STATION
+                      br
+                      button.btn.btn-primary(type='Submit', style='margin-left:225px') Submit
+                br
+                br
+                br      
+                .row(style="margin-left:160px")
+                  .col-md-4(style="background-color: #C5C5C5;height:100px;width:240px;margin-left:-20px;border-radius:5px ")
+                    h2 Autocad member #{count}
+                  .col-md-4(style="background-color: #C5C5C5 ;height:100px;width:240px;margin-left:50px;border-radius:5px")
+                    h2 3ds max member #{count1}
+                  .col-md-4(style="background-color:#C5C5C5 ;height:100px;width:240px;margin-left:50px;border-radius:5px")
+                    h2 Total station member #{count2}
+
+            #list.tab-pane.fade
+              h1  College List
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example1
+                      thead
+                        tr
+                          th Name
+                          th Phone 
+                          th Email
+                          th College
+                          th State
+                          th Course
+                          th action
+                          th action
+                      tbody
+                        each member in data
+                          tr
+                            td #{member.name} 
+                            td #{member.phoneno}
+                            td #{member.email}
+                            td #{member.college}
+                            td #{member.state}
+                            td #{member.opt}
+                            td 
+                               button.btn.btn-info.edit(value=member.phoneno) EDIT
+                            td 
+                               button.btn.btn-info.delete(value=member.phoneno) DELETE
+                .row
+                    form.form-group.dontdisplay(action='/update' method='post')
+                      h1(style="margin-top:20px;color:white;margin-left:450px") UPDATE
+                      br
+                      .col-md-5(style='border: 2px solid black;  padding: 20px; border-radius: 3%;margin-left:300px')
+                            
+                              label NAME
+                              input.name.form-control(type='text', name='name', placeholder='')
+                              br
+                              label PHONE NO
+                              input.phoneno.form-control(type='NUMBER', name='phoneno', placeholder='')
+                              br
+                              label EMAIL ID
+                              input.email.form-control(type='email', name='email', placeholder='')
+                              br
+                              label COLLEGE
+                              input.college.form-control(type='text', name='college', placeholder='')
+                              br
+                              label STATE
+                              input.state.form-control(type='text', name='state', placeholder='')
+                              br
+                              label Course:
+                              select.opt(name="opt")
+                                option(value="autocard") AUTOCAD
+                                option(value="3dsmax") 3DS MAX
+                                option(value="totalstation") TOTAL STATION
+                              br
+                              br  
+                              button.btn.btn-primary(type='submit', style='margin-left:150px') Submit
+
+            #employee.tab-pane.fade
+              h1 Employee Registration
+              br
+              .container
+                .row
+                  .col-md-6(style='  padding: 20px; border-radius: 3% ;margin-left:210px')
+                    form(method="post",action="/sr")
+                      label NAME
+                      input#name.form-control(type='text', name='name', placeholder='')
+                      br
+                      label PHONE NO
+                      input#phoneno.form-control(type='number', name='phoneno', placeholder='')
+                      br
+                      label EMAIL ID
+                      input#email.form-control(type='email', name='email', placeholder='')
+                      br
+                      label City
+                      input#college.form-control(type='text', name='city', placeholder='')
+                      br
+                      button.btn.btn-primary(type='Submit', style='margin-left:225px') Submit  
+            #liste.tab-pane.fade
+              h1 Employee Details
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example2
+                      thead
+                        tr
+                          th Name
+                          th Phone 
+                          th Email
+                          th City
+                      tbody
+                        each member in data_emp
+                          tr
+                            td #{member.name} 
+                            td #{member.phoneno}
+                            td #{member.email}
+                            td #{member.city}          
+           
+                                
+                     
+            #customer.tab-pane.fade
+              h1(style="margin-top:20px;color:white;margin-left:420px") Specification 
+              br
+              .container(style="margin-left:-50px")
+                .row
+                  .col-md-6(style='border: 2px solid black;  padding: 20px; border-radius: 3%') 
+                     form(method='post' action='/customer')
+                      label PLOT SIZE
+                      input.form-control(type='text', name='plotsize', placeholder=' plot size')
+                      br
+                      label VASTHU
+                      input.form-control(type='text', name='vasthu', placeholder='vasthu')
+                      br
+                      label MODERN
+                      input.form-control(type='text', name='modern', placeholder='modern')
+                      br
+                      label
+                      | Document
+                      label
+                      input.form-control(type='file', name='document')
+                      br
+                      label Type:      
+                      select(name="opts")
+                        option(value= ordinary) Ordinary
+                        option(value= g+1) G+1
+                        option(value= g+2) G+2
+                        option(value= Villa) Villa
+                        option(value= Apartment) Apartment
+                        option(value= duplex) Duplex           
+                      br
+                      br  
+                      label Bedroom:
+                      input(type='radio' name='bedroom' value='1' style="margin-left:10px")
+                      | 1
+                      
+                      input(type='radio' name='bedroom'  value='2' style="margin-left:10px")
+                      | 2
+                      
+                      input(type='radio' name='bedroom' value='3'  style="margin-left:10px")
+                      | 3  
+                      br
+                      label ADDITIONAL REQUIREMENT
+                      textarea(cols='40', rows='2' name='additional')
+                      h4(style='color:red') TERMS and CONDITIONS 
+                      h5 once submitted specificatons cannot be deleteted
+                      br
+                      button.btn.btn-primary(type='submit', style='margin-left:225px') Submit 
+            #listc.tab-pane.fade
+              h1(style="margin-top:20px;color:white;margin-left:450px") LIST
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example3
+                      thead
+                        tr
+                          th Plot Size 
+                          th Vasthu 
+                          th Modern
+                          th Document
+                          th Type
+                          th Bedroom
+                          th Additional Requirements
+                      tbody
+                        each member in data1
+                          tr
+                            td #{member.plotsize} 
+                            td #{member.vasthu}
+                            td #{member.modern}
+                            td #{member.document}
+                            td #{member.opts}
+                            td #{member.bedroom}
+                            td #{member.additional}
+
+            #constructionservices.tab-pane.fade
+
+            #builder.tab-pane.fade
+              h1(style="margin-top:20px;color:white;margin-left:450px") LIST
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example4
+                      thead
+                        tr
+                          th Name
+                          th Phone 
+                          th Email
+                          th Address
+                          th Place
+                          th type
+                          
+                      tbody
+                        each member in data2
+                          tr
+                            td #{member.name} 
+                            td #{member.phone}
+                            td #{member.email}
+                            td #{member.address}
+                            td #{member.place}
+                            td #{member.opts1}
+
+                 
+              
+            #contractors.tab-pane.fade
+              h1(style="margin-top:20px;color:white;margin-left:450px") LIST
+              .container
+                .row
+                  .col-md-8(style="margin-left:50px ; padding: 20px; border-radius: 2%; width:80%;margin-left:20px")
+                    table#example5
+                      thead
+                        tr
+                          th Name
+                          th Phone 
+                          th Email
+                          th Address
+                          th Place
+                          th type
+                          
+                      tbody
+                        each member in data3
+                          tr
+                            td #{member.name} 
+                            td #{member.phone}
+                            td #{member.email}
+                            td #{member.address}
+                            td #{member.place}
+                            td #{member.opts1}
+
+            #registration.tab-pane.fade
+              h1(style="margin-top:20px;color:blue;margin-left:440px") Registration 
+              br
+              .container(style="margin-left:-50px")
+                .row
+                  .col-md-6.col-md-offset-3(style='border: 2px solid black;  padding: 20px; border-radius: 3%') 
+                    form(method='post',action='/cont')
+                      label(style='color:white') NAME
+                      input.form-control(type='text', name='name')
+                      br
+                      label(style='color:white') PHONE
+                      input.form-control(type='text', name='phone')
+                      br
+                      label(style='color:white') EMAIL
+                      input.form-control(type='text', name='email')
+                      br
+                      label(style='color:white') ADDRESS
+                      input.form-control(type='text', name='address')
+                      br
+                      label(style='color:white') PLACE
+                      input.form-control(type='text', name='place')
+                      br
+                      br  
+                      label Type:      
+                        select(name="opts1")
+                          option(value= Builder) Builder                   
+                          option(value= Contractors) Contractors
+                      br    
+                      input.btn.btn-primary(type='submit' style="margin-left:240px")
+
+
+            #interior.tab-pane.fade
+
+            
+
+
+
+
+            #hall.tab-pane.fade
+              .container
+                .row.img-responsive
+                  br  
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/e.jpg',style='height:200px')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/g.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799             
+
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+
+                            img.img-thumbnail(src='images/h.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                .row.img-responsive
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+
+                            img.img-thumbnail(src='images/j.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/k.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/l.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                .row.img-responsive
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+
+                            img.img-thumbnail(src='images/o.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner        
+                          .flip-box-front
+                            img.img-thumbnail(src='images/p.jpg' style="height:200px")
+                      .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail(src='images/i.jpg' style="height:200px")
+                      .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799
+            #room.tab-pane.fade          
+              .container       
+                .row.img-responsive
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/a.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/b.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/c.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799     
+                .row.img-responsive
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/d.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/i.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/m.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799    
+                .row.img-responsive
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/n.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799       
+
+
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/q.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799   
+
+                      
+            #kitchen.tab-pane.fade          
+              .container       
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail(src='images/f.jpg' style="height:200px")
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799   
+
+
+            #exterior
+            
+
+            #a.tab-pane.fade
+              .container       
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/21.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/22.png' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/23.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799  
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/24.png')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799  
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/25.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/26.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799        
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/27.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/28.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/29.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/30.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/31.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/32.jpeg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799     
+            #b.tab-pane.fade
+              .container       
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/41.jpeg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/42.gif' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/43.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799         
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/44.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/45.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/46.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799         
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/47.jpeg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/48.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/49.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/50.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/51.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/52.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/53.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/54.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/55.jpeg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/56.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/57.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/58.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799   
+                .row
+                  br               
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/59.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/60.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                      
+            #c.tab-pane.fade
+              .container       
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/61.jpeg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/62.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/63.jpg' ) 
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799         
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/64.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/65.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                             img.img-thumbnail.aa(src='images/66.jpg')
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799          
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/67.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/68.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/69.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                .row
+                  br
+                  .col-md-3(style="margin-left:50px")
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/70.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/71.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+                  .col-md-3
+                      .flip-box
+                        .flip-box-inner
+                          .flip-box-front
+                            img.img-thumbnail.aa(src='images/72.jpg' )
+                          .flip-box-back
+                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
+                            p 123456799      
+
+
+
+                    
+    link(rel='stylesheet', href='https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css')
+    link(rel='stylesheet', href='https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css')
+      
+    script(src='https://code.jquery.com/jquery-3.3.1.js')
+    script(src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js')
+    script(src='https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js')
+    script(src='https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js')
+    script(src='https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js')
+    script(src='https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js')
+    script.
+        $(document).ready(function(){
+        $('#example').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
+        $(document).ready(function(){
+        $('#example1').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
+        $(document).ready(function(){
+        $('#example2').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
+        $(document).ready(function(){
+        $('#example3').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
+        $(document).ready(function(){
+        $('#example4').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
+        $(document).ready(function(){
+        $('#example5').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        } );
+        } );
