@@ -1171,16 +1171,6 @@ html
                           .flip-box-back
                             button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
                             p 123456799      
-                .row
-                  br
-                  .col-md-3(style="margin-left:50px")
-                      .flip-box
-                        .flip-box-inner
-                          .flip-box-front
-                            img.img-thumbnail.aa(src='images/70.jpg' )
-                          .flip-box-back
-                            button#abcd.btn.btn-info(style="margin-top:80px;text-align:center;font-weight:bold;") click this
-                            p 123456799      
                   .col-md-3
                       .flip-box
                         .flip-box-inner
